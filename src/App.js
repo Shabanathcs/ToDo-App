@@ -42,7 +42,7 @@ function App() {
 
                     }}
                     value={obj.status} type="checkbox" name="" id="" />
-
+                    
                     <p>{obj.text}</p>
                     
                   </div>
@@ -59,12 +59,13 @@ function App() {
                     
                 )})
         }
-        <h1>Active todos</h1>
+        <br/>
+        <h1>Task Done</h1><br/>
         {
           toDos.map((obj)=>{
             if(obj.status)
             {
-              return(<h1>{obj.text}</h1>)
+              return(<div className='input'><h4>{obj.text}</h4></div>)
             }
             return null;
           }
